@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head >
+      <title>Чернівецький національний університет</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+<body>
+<header class="header-2">
+<h2> ЧНУ сьогодні</h2>
+</header>
+
+<nav>
+<ul>
+ <li><a href="history.html">Історія ЧНУ</a></li>
+ <li><a href="facts.html">Цікаві факти</a></li>
+ <li><a href="scientists.html"> Визначні вчені</a></li>
+ <li><a href="alumni.html"> Відомі випускники</a></li>
+ <li><a href="today.html"> ЧНУ сьогодні</a></li>
+ <li><a href="plans.html"> Я планую навчатися в ЧНУ</a></li>
+</ul>
+</nav>
+<div class="icons">
+    <img src="info/back.svg" id="back" class="icon">
+    <img src="info/home.svg" id="home" class="icon">
+    <img src="info/next.svg" id="next" class="icon">
+</div>
+<main class="content">
+<section class="content-box">
+<div class="text-image">
+    <div class="text">
+        <div class="text-img">
+<p>Цьогоріч Чернівецький національний університет імені Юрія Федьковича відзначає своє 150-річчя. Це був сьомий у світі та єдиний в Україні університет, який діє як освітній заклад та є пам'яткою Всесвітньої спадщини.</p>
+<p>Зараз університет має 18 корпусів, з яких 12 – навчальних. Серед них красою і неповторністю вирізняється архітектурний ансамбль колишньої Резиденції митрополитів Буковини і Далмації.</p>
+        <img src="info/photo/today.jpg"  class="Img-center"> 
+        </div>
+<p>Для потреб студентів є 7 гуртожитків та понад три тисячі ліжкомісць.</p>
+<p>В університеті діє одна з найбагатших книгозбірень – Наукова бібліотека з фондом у майже 2,8 млн. примірників, видавництво ЧНУ "Рута", спорткомплекс, дослідне господарство, ботанічний сад, геофізична обсерваторія, природничий, геологічний та етнографічний музеї, історико-архітектурний музейний комплекс, інформаційно-телекомунікаційний центр, Центр управління об’єктом ЮНЕСКО та ін.</p>
+<p>Поряд з університетом вдало спланований мальовничий дендрологічний парк з рідкісними видами рослин.</p>
+<p>28 червня 2011 року, у день відзначення 15-ї річниці Конституції України, 35 сесія Комітету Всесвітньої спадщини ЮНЕСКО прийняла рішення включити Архітектурний ансамбль Резиденції митрополитів Буковини і Далмації (нині Центральний корпус університету) до списку об’єктів Всесвітньої спадщини ЮНЕСКО. Резиденція митрополитів Буковини і Далмації є третім власне український об’єктом, що входить до Списку Всесвітньої спадщини ЮНЕСКО.</p>
+<p>Останній етап контролю якості проходив безпосередньо на будівництві. Перед в'їздом на територію було зведено спеціальну естакаду двадцятиметрової висоти, з якої цеглини скидали на тротуар, і якщо хоч на одній з'являлися тріщини, то забраковували всю партію.</p>
+<span style="font-size: 14px; color: #555;">
+(Джерело: <a href="https://suspilne.media/chernivtsi/517505-12-rokiv-ak-pamatka-unesko-ak-cerniveckij-universitet-uvijsov-do-pereliku-svitovoi-spadsini/" target="_blank" style="color:#337ab7;">тисни тут</a>)
+</span>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>Навчальний інформаційний проєкт до 150 років Чернівецькому національному університету імені Юрія Федьковича</p>
+<p>© 2025</p>
+</footer>
+<script>
+document.querySelectorAll("nav ul li a").forEach(button => {
+    button.addEventListener("pointerdown", function(e){
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = e.clientX - rect.left - size/2 + "px";
+        ripple.style.top = e.clientY - rect.top - size/2 + "px";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600); 
+    });
+});
+</script>
+<script>
+const pages = [
+    "index.html",       
+    "history.html",
+    "facts.html",
+    "scientists.html",
+    "alumni.html",
+    "today.html",
+    "plans.html"
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const currentIndex = pages.indexOf(currentPage);
+
+document.getElementById("back").addEventListener("click", () => {
+    if (currentIndex > 0) {
+        window.location.href = pages[currentIndex - 1];
+    }
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    if (currentIndex < pages.length - 1) {
+        window.location.href = pages[currentIndex + 1];
+    }
+});
+
+document.getElementById("home").addEventListener("click", () => {
+    window.location.href = pages[0];
+});
+</script>
+</body>
+
+</html>

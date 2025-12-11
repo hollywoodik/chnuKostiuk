@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+     <head >
+     <title>Чернівецький національний університет</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+<body>
+<header class="top">
+<img src="info/photo/logo.png" alt="Логотип ЧНУ" class="top-img">
+</header>
+<section class="title">
+  <h1>150 років Чернівецькому національному університету імені Юрія Федьковича</h1>
+  </section>
+
+<nav>
+<ul>
+ <li><a href="history.html">Історія ЧНУ</a></li>
+ <li><a href="facts.html">Цікаві факти</a></li>
+ <li><a href="scientists.html"> Визначні вчені</a></li>
+ <li><a href="alumni.html"> Відомі випускники</a></li>
+ <li><a href="today.html"> ЧНУ сьогодні</a></li>
+ <li><a href="plans.html"> Я планую навчатися в ЧНУ</a></li>
+</ul>
+</nav>
+<section class="about-me">
+    <div class="about-text">
+        <div class="line"></div>
+        <h2>Вітаю на моєму сайті!</h2>
+        <h3>Костюк Анастасія Іванівна</h3>
+        <p>Клас: 11</p>
+        <p>Навчальний заклад: Новодністровський ОЗЗСО "Новодністровська гімназія"</p>
+        <p>Вчитель: Муляр Зоя Іванівна</p>
+        <p>Тема сайту: 150 років Чернівецькому національному університету імені Юрія Федьковича</p>
+        <p>Мета сайту - ознайомити з історією, досягненнями та сучасним життям Чернівецького національного університету імені Юрія Федьковича з нагоди 150-річчя його заснування</p>
+
+    </div>
+
+    <div class="about-image">
+        <img src="info/my photo.jpg" >
+    </div>
+</section>
+<div class="infographic-container">
+<div class="infographic">
+
+    <a href="index.html" class="center">
+        <div class="center-content">
+            
+            <h2>Мапа сайту</h2>
+        </div>
+    </a>
+
+    <a href="history.html" class="block block1">
+        <span>01<br>Історія ЧНУ</span>
+    </a>
+
+    <a href="facts.html" class="block block2">
+        <span>02<br>Цікаві факти</span>
+    </a>
+
+    <a href="scientists.html" class="block block3">
+        <span>03<br>Визначні вчені</span>
+    </a>
+
+    <a href="alumni.html" class="block block4">
+        <span>04<br>Відомі випускники</span>
+    </a>
+
+    <a href="today.html" class="block block5">
+        <span>05<br>ЧНУ сьогодні</span>
+    </a>
+    <a href="plans.html" class="block block6">
+        <span>06<br>Я планую навчатися в ЧНУ</span>
+    </a>
+</div>
+</div>
+<div class="icons">
+    <img src="info/back.svg" id="back" class="icon">
+    <img src="info/home.svg" id="home" class="icon">
+    <img src="info/next.svg" id="next" class="icon">
+</div>
+<footer>
+<p>Навчальний інформаційний проєкт до 150 років Чернівецькому національному університету імені Юрія Федьковича</p>
+<p>© 2025</p>
+</footer>
+<script>
+document.querySelectorAll("nav ul li a").forEach(button => {
+    button.addEventListener("pointerdown", function(e){
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = e.clientX - rect.left - size/2 + "px";
+        ripple.style.top = e.clientY - rect.top - size/2 + "px";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600); 
+    });
+});
+</script>
+<script>
+const pages = [
+    "index.html",       
+    "history.html",
+    "facts.html",
+    "scientists.html",
+    "alumni.html",
+    "today.html",
+    "plans.html"
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const currentIndex = pages.indexOf(currentPage);
+
+document.getElementById("back").addEventListener("click", () => {
+    if (currentIndex > 0) {
+        window.location.href = pages[currentIndex - 1];
+    }
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    if (currentIndex < pages.length - 1) {
+        window.location.href = pages[currentIndex + 1];
+    }
+});
+
+document.getElementById("home").addEventListener("click", () => {
+    window.location.href = pages[0];
+});
+</script>
+<script>
+window.addEventListener("scroll", () => {
+    const header = document.querySelector(".top");
+
+    if (window.scrollY > 40) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
+});
+</script>
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head >
+      <title>Чернівецький національний університет</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+<body>
+<header class="header-2">
+<h2> Я планую навчатися в ЧНУ</h2>
+</header>
+
+<nav>
+<ul>
+ <li><a href="history.html">Історія ЧНУ</a></li>
+ <li><a href="facts.html">Цікаві факти</a></li>
+ <li><a href="scientists.html"> Визначні вчені</a></li>
+ <li><a href="alumni.html"> Відомі випускники</a></li>
+ <li><a href="today.html"> ЧНУ сьогодні</a></li>
+ <li><a href="plans.html"> Я планую навчатися в ЧНУ</a></li>
+</ul>
+</nav>
+<div class="icons">
+    <img src="info/back.svg" id="back" class="icon">
+    <img src="info/home.svg" id="home" class="icon">
+    <img src="info/next.svg" id="next" class="icon">
+</div>
+<main class="content">
+<section class="content-box">
+<div class="text-image">
+    <div class="text">
+        <div class="text-img">
+            <img src="info/my photo.jpg"  class="Img-float">
+        <p>Я — одинадцятикласниця Новодністровського ОЗССО "Новодністровська гімназія", і зовсім скоро переді мною відкриється головний вибір: де продовжити свій шлях. Для мене сумнівів немає — я хочу вступити на кафедру комп’ютерних наук Чернівецького національного університету імені Юрія Федьковича. І ця мрія не з’явилася раптово: вона визрівала з кожним роком, з кожною моєю поїздкою до Чернівців, з кожним кроком, який я робила у власному розвитку.</p>
+        </div>
+        <p>Чернівці давно стали частиною мого життя. Я часто буваю там, беру участь у подіях і проєктах, відвідую заходи, пов’язані зі шкільними, міськими й науковими ініціативами. Це місто завжди сприймалося мною не як туристичний пункт, а як простір для зростання. Можливо, тому я так легко уявляю себе там студенткою — не “десь”, а саме у ЧНУ.</p> 
+<p>Особистий зв’язок із університетом у мене з’явився задовго до того, як я сама почала замислюватися над спеціальністю. Мій тато свого часу навчався в ЧНУ на математично-інформатичному факультеті, і з дитинства я чула його історії про університет, викладачів, атмосферу, студентське життя. Саме ці розповіді стали для мене першими сходинками до розуміння, що навчання може надихати, а університет може стати не просто місцем здобуття знань, а частиною твоєї особистої історії.</p>
+<p>Коли я почала цікавитися технологіями, логікою алгоритмів і програмуванням, стало очевидно, що мене тягне до комп’ютерних наук. Це та сфера, у якій я бачу можливість створювати щось нове, розв’язувати складні задачі й реалізовувати себе в сучасному світі. Кожне моє досягнення, кожен новий проєкт або дослідження лише зміцнювали цей вибір.</p>
+<p>Саме тому я вже пишу другу наукову роботу в межах Чернівецького МАН. Мене захоплює сам процес дослідження, аналізу, пошуку рішень — і я відчуваю, що цей досвід будує фундамент мого майбутнього в ІТ.</p>
+<p>Тепер, коли до вступу залишається все менше часу, я бачу свій шлях чітко і впевнено. Я хочу навчатися серед людей, які також прагнуть створювати, досліджувати, програмувати та змінювати технологічний світ. Я хочу розвиватися в університеті, де поєднуються традиції, науковість і сучасна ІТ-освіта. Я хочу пройти власний шлях у ЧНУ — таким же натхненним, як колись шлях мого тата, але вже у моїй улюбленій галузі.</p>
+<p>Попереду — підготовка, НМТ, хвилювання, очікування… але я готова. Щодня я роблю кроки до своєї мрії — стати студенткою кафедри комп’ютерних наук ЧНУ.</p>
+<p>Для мене це не просто вступ до університету — це продовження історії, яку я вже почала писати. І ця історія точно матиме продовження в ЧНУ.</p>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<p>Навчальний інформаційний проєкт до 150 років Чернівецькому національному університету імені Юрія Федьковича</p>
+<p>© 2025</p>
+</footer>
+<script>
+document.querySelectorAll("nav ul li a").forEach(button => {
+    button.addEventListener("pointerdown", function(e){
+        const ripple = document.createElement("span");
+        ripple.classList.add("ripple");
+
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        ripple.style.width = ripple.style.height = size + "px";
+        ripple.style.left = e.clientX - rect.left - size/2 + "px";
+        ripple.style.top = e.clientY - rect.top - size/2 + "px";
+
+        this.appendChild(ripple);
+
+        setTimeout(() => ripple.remove(), 600); 
+    });
+});
+</script>
+<script>
+const pages = [
+    "index.html",       
+    "history.html",
+    "facts.html",
+    "scientists.html",
+    "alumni.html",
+    "today.html",
+    "plans.html"
+];
+
+const currentPage = window.location.pathname.split("/").pop();
+const currentIndex = pages.indexOf(currentPage);
+
+document.getElementById("back").addEventListener("click", () => {
+    if (currentIndex > 0) {
+        window.location.href = pages[currentIndex - 1];
+    }
+});
+
+document.getElementById("next").addEventListener("click", () => {
+    if (currentIndex < pages.length - 1) {
+        window.location.href = pages[currentIndex + 1];
+    }
+});
+
+document.getElementById("home").addEventListener("click", () => {
+    window.location.href = pages[0];
+});
+</script>
+</body>
+
+</html>
