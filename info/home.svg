@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5092"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="головна.svg">
+  <defs
+     id="defs5086" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="-121.09936"
+     inkscape:cy="595.73065"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5089">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="opacity:1;fill:#4f6815;fill-opacity:0.43650794;stroke:none;stroke-width:4.54024792;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path6835"
+       cx="96.751564"
+       cy="158.01984"
+       rx="89.268021"
+       ry="83.92263" />
+    <ellipse
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#4f6815;stroke-width:4.947;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path5637"
+       cx="103.43328"
+       cy="148.39816"
+       rx="85.114487"
+       ry="82.709061" />
+    <path
+       style="fill:none;stroke:#ffedab;stroke-width:12.15100002;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 59.404311,137.77524 v 65.07573 h 88.057999 v -65.07573"
+       id="path5677"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5679"
+       style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:'Cambria Bold Italic';letter-spacing:0px;word-spacing:0px;fill:#f0e6da;fill-opacity:1;stroke:none"
+       transform="matrix(0.26458333,0,0,0.26458333,-5.8799296,-9.0871639)"><flowRegion
+         id="flowRegion5681"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:'Cambria Bold Italic';fill:#f0e6da;fill-opacity:1"><rect
+           id="rect5683"
+           width="337.39096"
+           height="183.84776"
+           x="288.90363"
+           y="587.13885"
+           style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:'Cambria Bold Italic';fill:#f0e6da;fill-opacity:1" /></flowRegion><flowPara
+         id="flowPara5685"
+         style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.25;font-family:Cambria;-inkscape-font-specification:'Cambria Bold Italic';fill:#f0e6da;fill-opacity:1">Головна</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#75070c;stroke-width:13.77900028;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 36.019392,135.0936 101.56964,77.001588 171.19635,135.56048"
+       id="path5675"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+  </g>
+</svg>
